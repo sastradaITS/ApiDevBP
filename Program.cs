@@ -1,3 +1,5 @@
+using ApiDevBP.Database;
+using ApiDevBP.Services;
 using Microsoft.OpenApi.Models;
 using Serilog;
 var builder = WebApplication.CreateBuilder(args);
@@ -23,6 +25,9 @@ builder.Services.AddSwaggerGen(options =>
     options.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, xmlFilename));
 });
 
+//Registrar la Configuración en el Contenedor de Servicios
+builder.Services.Configure<DatabaseSettings>(builder.Configuration.GetSection("DatabaseSettings"));
+builder.Services.AddSingleton<UserService>();
 
 var app = builder.Build();
 
