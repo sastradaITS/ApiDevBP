@@ -1,0 +1,27 @@
+Create:
+  {
+    "id": 2,
+    "name": "Pedro",
+    "lastname": "Rodriguez"
+  },
+  {
+    "id": 3,
+    "name": "Juan",
+    "lastname": "Gonzalez"
+  }
+
+Update:
+{
+    "id": 2,
+    "name": "Rubén",
+    "lastname": "López"
+  },
+  {
+    "id": 3,
+    "name": "Darío",
+    "lastname": "Cuevas"
+  }
+
+Delete:
+Id: 2
+Id: 3
